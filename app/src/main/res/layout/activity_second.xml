@@ -28,7 +28,7 @@
                 android:id="@+id/etText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/enter_text"
+                android:hint="@string/text"
                 android:inputType="text" />
 
         </com.google.android.material.textfield.TextInputLayout>
