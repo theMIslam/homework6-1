@@ -24,7 +24,7 @@
             app:boxCornerRadiusTopEnd="8dp"
             app:boxCornerRadiusTopStart="8dp">
 
-            <com.google.android.material.textfield.TextInputEditText
+            <EditText
                 android:id="@+id/etText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
