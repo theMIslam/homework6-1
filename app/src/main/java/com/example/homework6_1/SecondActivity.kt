@@ -38,7 +38,7 @@ class SecondActivity : AppCompatActivity() {
     private fun initClickers() {
         with(binding) {
             btnBack.setOnClickListener {
-                if (etText.text.isNotEmpty()) {
+                if (etText.text!!.isNotEmpty()) {
                     passData()
                 } else {
                     Toast.makeText(
