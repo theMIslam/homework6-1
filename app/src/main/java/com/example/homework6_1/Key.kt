@@ -1,1 +1,0 @@
-package com.example.homework6_1class Key {    companion object{        const val DATA_KEY = "data"    }}

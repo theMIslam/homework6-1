@@ -23,14 +23,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setData() {
-        binding.etText.setText(intent.getStringExtra(Key.DATA_KEY))
+        binding.etText.setText(intent.getStringExtra(DATA_KEY))
     }
 
     private fun initLauncher() {
         resultLauncher =
             registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
                 if (result.resultCode == Activity.RESULT_OK) {
-                    binding.etText.setText(result.data?.getStringExtra(Key.DATA_KEY))
+                    binding.etText.setText(result.data?.getStringExtra(DATA_KEY))
                 }
             }
     }
@@ -53,7 +53,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun passData() {
         val data = Intent(this@MainActivity, SecondActivity::class.java)
-        data.putExtra(Key.DATA_KEY, binding.etText.text.toString())
+        data.putExtra(DATA_KEY, binding.etText.text.toString())
         resultLauncher.launch(data)
+    }
+
+    companion object {
+        const val DATA_KEY = "data"
     }
 }
